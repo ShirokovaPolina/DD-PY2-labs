@@ -1,12 +1,9 @@
 def count_letters(text):
     letter_counts = {}
     for char in text:
-        if char.isalpha():
-            char = char.lower()
-            if char in letter_counts:
-                letter_counts[char] += 1
-            else:
-                letter_counts[char] = 1
+        char = char.lower()
+        if char.isalpha():  # Это условие все еще нужно, чтобы исключить не буквенные символы
+            letter_counts[char] = letter_counts.get(char, 0) + 1
     return letter_counts
 
 def calculate_frequency(letter_counts):
