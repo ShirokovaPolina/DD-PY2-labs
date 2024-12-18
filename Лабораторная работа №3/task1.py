@@ -2,7 +2,6 @@ def find_product_index(items, item_to_find):
     for i, item in enumerate(items):
         if item == item_to_find:
             return i
-    return None
 
 
 items_list = ['яблоко', 'банан', 'апельсин', 'груша', 'киви', 'банан']
